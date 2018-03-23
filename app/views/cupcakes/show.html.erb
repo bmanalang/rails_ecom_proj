@@ -1,1 +1,4 @@
-<%= render @cupcake %>
+<%= link_to 'Cupcakes', root_path%>
+<%= render partial: 'cupcake',
+           object: @cupcake,
+           locals: { show_details_link: false } %>

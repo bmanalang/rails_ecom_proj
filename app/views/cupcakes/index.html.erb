@@ -1,2 +1,4 @@
 <h1>Cupcakes</h1>
-<%= render @cupcakes %>
+<%= render partial: 'cupcake',
+           collection: @cupcakes,
+           locals: { show_details_link: true }%>

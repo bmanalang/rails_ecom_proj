@@ -1,0 +1,15 @@
+<h1>Cupcakes</h1>
+<% @cupcakes.each do |c| %>
+  <h2><%= c.name %></h2>
+  <p>
+    <strong>Description:</strong>
+    <%= c.description %>
+  </p>
+  <p>
+    <strong>Category:</strong>
+    <%= c.category.name %>
+  </p>
+  <p>
+    <%= link_to 'View Cupcake', c %>
+  </p>
+<% end %>

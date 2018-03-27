@@ -1,9 +1,14 @@
-<h1>About</h1>
+<div class="container">
+  <h1 class="title">About</h1>
 
-<p><%= @about.description %></p>
+  <p><%= @about.description %></p>
+  <br>
+  <strong>Location:</strong>
+  <p><%= @about.address %></p>
 
-<p><%= @about.address %></p>
+  <p><%= @about.telephone %></p>
+  <br>
+  <strong>Contact us by email:</strong>
+  <p><%= @about.email %></p>
+</div>
 
-<p><%= @about.telephone %></p>
-
-<p><%= @about.email %></p>

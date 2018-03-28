@@ -3,18 +3,20 @@
     <div class="column">
       <div class="card">
         <div class="card-content">
-          <h2 class="title"><% if cupcake.image.present? %>
+          <h2 class="title">
+            <% if cupcake.image.present? %>
               <%= image_tag cupcake.image.thumb %>
-              <% end%><%= cupcake.name  %></h2>
-          <p>
-            <strong>Description:</strong>
-            <%= cupcake.description %>
-          </p>
+            <% end%>
+            <%= cupcake.name  %>
+          </h2>
           <p>
             <strong>Category:</strong>
             <%= cupcake.category.name %>
           </p>
-
+          <% if show_description %>
+            <strong>Description:</strong>
+            <%= cupcake.description %>
+          <% end %>
           <footer class="card-footer">
             <% if show_details_link %>
               <div class="card-footer-item"><%= link_to 'View Cupcake', cupcake %></div>

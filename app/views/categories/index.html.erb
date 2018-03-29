@@ -2,7 +2,12 @@
 <ol>
   <% @categories.each do |c| %>
     <li>
-      <%= c.name %>
+
+      <%= link_to category_cupcakes_path(c) do %>
+        <%= c.name %>
+        <% end %>
+
+
     </li>
   <% end %>
 </ol>

@@ -2,7 +2,11 @@ Rails.application.routes.draw do
 
   get 'categories/index'
 
-  resources :about, :categories, :cupcakes, only: [:index, :show]
+  resources :about, :cupcakes, only: [:index, :show]
+
+  resources :categories  do
+    resources :cupcakes, only: [:index]
+  end
   root to: 'cupcakes#index'
 
   get 'abouts', to: 'about#index', as: 'about_page'

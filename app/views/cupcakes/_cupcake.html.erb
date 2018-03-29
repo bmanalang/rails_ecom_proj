@@ -16,6 +16,9 @@
           <% if show_description %>
             <strong>Description:</strong>
             <%= cupcake.description %>
+            <br><br>
+              <strong>Price:</strong>
+              <%= number_to_currency cupcake.price %>
           <% end %>
           <footer class="card-footer">
             <% if show_details_link %>

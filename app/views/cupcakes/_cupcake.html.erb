@@ -2,11 +2,13 @@
   <div class="columns is-multiline is-mobile">
     <div class="column is-one-third is-centered">
       <div class="card">
+        <% if show_details_link %>
+          <%= paginate @cupcakes %>
+        <% end %>
         <div class="card-content">
           <h2 class="title">
             <% if cupcake.image.present? %>
               <%= image_tag cupcake.image.thumb %>
-
             <% end%>
             <%= cupcake.name  %>
           </h2>
@@ -31,7 +33,6 @@
                 <%= number_field_tag :quantity, 1 %>
                 <%= submit_tag "Add to Cart"%>
                     <% end %>
-
             </a>
           </footer>
         </div>

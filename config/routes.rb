@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get 'abouts', to: 'about#index', as: 'about_page'
   get 'search', to: 'search#index', as: 'search'
-  get 'order_items', to: 'order_items#index'
+  get '/cart', to: 'order_items#index'
   resources :order_items, path: '/cart/items'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

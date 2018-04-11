@@ -4,4 +4,6 @@ class Cupcake < ApplicationRecord
   mount_uploader :image, ImageUploader
 
   validates :name, :price, presence: true
+
+  paginates_per 1
 end

@@ -11,19 +11,6 @@
               <%= link_to 'About', about_page_path %>
             </div>
             <div class="nav-item">
-              <div class="field">
-                <div class="control">
-                  <div class="select is-primary">
-                    <select>
-                      <option><%= link_to 'Chocolate', categories_path %></option>
-                      <option><%= link_to 'Fruit', categories_path %></option>
-                      <option><%= link_to 'Vanilla', categories_path %></option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="nav-item">
               <%= form_tag(search_path, method: "get") do %>
                 <%= label_tag(:q, "Search for:") %>
                 <%= text_field_tag(:q) %>

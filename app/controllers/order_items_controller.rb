@@ -7,10 +7,8 @@ class OrderItemsController < ApplicationController
   end
 
   def create
-    current_cart.add_item(
-                    cupcake_id: params[:cupcake_id],
-                    quantity: params[:quantity]
-    )
+    current_cart.add_item(cupcake_id: params[:cupcake_id],
+                          quantity: params[:quantity])
 
     redirect_to cart_path
   end

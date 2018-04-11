@@ -1,11 +1,11 @@
 <div class="container">
   <div class="columns is-multiline is-mobile">
-    <div class="column is-one-third is-centered">
+    <div class="column is-one-third is-centered"><br>
       <div class="card">
-        <% if show_details_link %>
-          <%= paginate @cupcakes %>
-        <% end %>
         <div class="card-content">
+          <% if show_details_link %>
+            <%= paginate @cupcakes %>
+          <% end %><br>
           <h2 class="title">
             <% if cupcake.image.present? %>
               <%= image_tag cupcake.image.thumb %>

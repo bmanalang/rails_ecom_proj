@@ -1,16 +1,25 @@
 <div class="container">
   <div class="columns is-multiline is-mobile">
     <div class="column is-one-third is-centered"><br>
-      <div class="card">
-        <div class="card-content">
+      <div class="tile">
+        <div class="card">
+        <div class="card-image">
           <% if show_details_link %>
-            <%= paginate @cupcakes %>
-          <% end %><br>
+            <%= paginate @cupcakes %><br>
+          <% end %>
+          <figure class="image is-320x240">
+            <%= image_tag cupcake.image %>
+          </figure>
+        </div>
+        <div class="card-content">
           <h2 class="title">
+            <% if show_description %>
             <% if cupcake.image.present? %>
               <%= image_tag cupcake.image.thumb %>
             <% end%>
-            <%= cupcake.name  %>
+              <% end %>
+            <br>
+              <%= cupcake.name %>
           </h2>
           <p>
             <strong>Category:</strong>
@@ -36,6 +45,7 @@
             </a>
           </footer>
         </div>
+      </div>
       </div>
     </div>
   </div>
